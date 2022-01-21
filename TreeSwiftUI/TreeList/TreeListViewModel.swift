@@ -21,13 +21,15 @@ class TreeListViewModel {
     // MARK: Fetch
     
     func fetchData() {
-        let completionHandler: ([Record]) -> Void = { [weak self] recordList in
+        let completionHandler: (Result<[Record], Error>) -> Void = { [weak self] res in
             DispatchQueue.main.async {
-                self?.store.records = recordList
+                if case let .success(listTree) = res {
+                    self?.store.records = listTree
+                }
             }
         }
         Task.init {
-            await self.service.fetchTrees(completionHandler: completionHandler)
+            await self.service.fetchTrees(completion: completionHandler)
         }
     }
 }

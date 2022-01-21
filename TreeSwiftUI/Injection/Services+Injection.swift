@@ -11,7 +11,13 @@ import Resolver
 
 extension Resolver {
     public static func registerServices() {
+        registerDefaultServices()
         registerTreeListService()
+    }
+    
+    public static func registerDefaultServices() {
+        register { DefaultNetworkService() }
+        register { DefaultDataTransferService() }
     }
     
     public static func registerTreeListService() {

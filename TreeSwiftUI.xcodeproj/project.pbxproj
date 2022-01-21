@@ -11,6 +11,11 @@
 		2307A6F8279AFF340044ED89 /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A6F7279AFF340044ED89 /* AppDelegate+Injection.swift */; };
 		2307A6FB279AFFEE0044ED89 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 2307A6FA279AFFEE0044ED89 /* Resolver */; };
 		2307A6FD279B00390044ED89 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A6FC279B00390044ED89 /* Services+Injection.swift */; };
+		2307A700279B07950044ED89 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A6FF279B07950044ED89 /* DataTransferService.swift */; };
+		2307A702279B07C60044ED89 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A701279B07C60044ED89 /* Endpoint.swift */; };
+		2307A704279B07EC0044ED89 /* DefaultDataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A703279B07EC0044ED89 /* DefaultDataTransferService.swift */; };
+		2307A706279B08140044ED89 /* JSONResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A705279B08140044ED89 /* JSONResponseDecoder.swift */; };
+		2307A708279B08570044ED89 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A707279B08570044ED89 /* NetworkService.swift */; };
 		23307A5327887330006AFF4C /* TreeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23307A5227887330006AFF4C /* TreeSwiftUIApp.swift */; };
 		23307A5527887330006AFF4C /* TreeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23307A5427887330006AFF4C /* TreeList.swift */; };
 		23307A5727887332006AFF4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23307A5627887332006AFF4C /* Assets.xcassets */; };
@@ -45,6 +50,11 @@
 		2307A6F5279AFD9D0044ED89 /* TreeListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListStore.swift; sourceTree = "<group>"; };
 		2307A6F7279AFF340044ED89 /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 		2307A6FC279B00390044ED89 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
+		2307A6FF279B07950044ED89 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		2307A701279B07C60044ED89 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2307A703279B07EC0044ED89 /* DefaultDataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataTransferService.swift; sourceTree = "<group>"; };
+		2307A705279B08140044ED89 /* JSONResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResponseDecoder.swift; sourceTree = "<group>"; };
+		2307A707279B08570044ED89 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		23307A4F27887330006AFF4C /* TreeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23307A5227887330006AFF4C /* TreeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSwiftUIApp.swift; sourceTree = "<group>"; };
 		23307A5427887330006AFF4C /* TreeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeList.swift; sourceTree = "<group>"; };
@@ -96,6 +106,18 @@
 			path = Injection;
 			sourceTree = "<group>";
 		};
+		2307A6FE279B07670044ED89 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2307A6FF279B07950044ED89 /* DataTransferService.swift */,
+				2307A701279B07C60044ED89 /* Endpoint.swift */,
+				2307A703279B07EC0044ED89 /* DefaultDataTransferService.swift */,
+				2307A705279B08140044ED89 /* JSONResponseDecoder.swift */,
+				2307A707279B08570044ED89 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		23307A4627887330006AFF4C = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +141,7 @@
 		23307A5127887330006AFF4C /* TreeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				2307A6FE279B07670044ED89 /* Network */,
 				2307A6F2279AFCE70044ED89 /* Injection */,
 				23ECEFF92788858700F71C63 /* TreeDetail */,
 				23ECEFF82788856200F71C63 /* TreeList */,
@@ -318,14 +341,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2307A704279B07EC0044ED89 /* DefaultDataTransferService.swift in Sources */,
 				2307A6F8279AFF340044ED89 /* AppDelegate+Injection.swift in Sources */,
 				23307A5527887330006AFF4C /* TreeList.swift in Sources */,
 				23307A7E27887E09006AFF4C /* Welcome.swift in Sources */,
 				23ECEFFB2788859E00F71C63 /* TreeDetail.swift in Sources */,
+				2307A700279B07950044ED89 /* DataTransferService.swift in Sources */,
+				2307A708279B08570044ED89 /* NetworkService.swift in Sources */,
 				23307A5327887330006AFF4C /* TreeSwiftUIApp.swift in Sources */,
 				23D6940D2788890A0091FD42 /* TreeListViewModel.swift in Sources */,
 				23D6940F2788893E0091FD42 /* TreeListService.swift in Sources */,
 				2307A6F6279AFD9D0044ED89 /* TreeListStore.swift in Sources */,
+				2307A702279B07C60044ED89 /* Endpoint.swift in Sources */,
+				2307A706279B08140044ED89 /* JSONResponseDecoder.swift in Sources */,
 				2307A6FD279B00390044ED89 /* Services+Injection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

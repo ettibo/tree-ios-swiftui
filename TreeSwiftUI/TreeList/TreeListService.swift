@@ -6,21 +6,43 @@
 //
 
 import Foundation
+import Resolver
+
 
 class TreeListService {
-    func fetchTrees(completionHandler: @escaping ([Record]) -> Void) async {
-        guard let url = URL(string: "https://opendata.paris.fr/api/records/1.0/search/?dataset=les-arbres&rows=20") else {
-            print("Invalid URL")
-            return
+    struct TreeEndpoint: Endpoint {
+        var path: String {
+            return "https://opendata.paris.fr/api/records/1.0/search/?dataset=les-arbres&rows=20"
         }
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            if let decodedResponse = try? JSONDecoder().decode(Welcome.self, from: data) {
-                completionHandler(decodedResponse.records)
+    }
+    
+    @Injected var dataTransFertService: DataTransferService
+    
+    
+    func fetchTrees(completion: @escaping (Result<[Record], Error>) -> Void) async {
+        let treeEndpoint = TreeEndpoint()
+        
+        self.dataTransFertService.request(endpoint: treeEndpoint) { (result: Result<Welcome, Error>) in
+            switch result {
+            case .success(let responseDTO):
+                completion(.success(responseDTO.records))
+            case .failure(let error):
+                completion(.failure(error))
             }
-            // more code to come
-        } catch {
-            print("Invalid data")
         }
+//
+//        guard let url = URL(string: "https://opendata.paris.fr/api/records/1.0/search/?dataset=les-arbres&rows=20") else {
+//            print("Invalid URL")
+//            return
+//        }
+//        do {
+//            let (data, _) = try await URLSession.shared.data(from: url)
+//            if let decodedResponse = try? JSONDecoder().decode(Welcome.self, from: data) {
+//                completionHandler(decodedResponse.records)
+//            }
+//            // more code to come
+//        } catch {
+//            print("Invalid data")
+//        }
     }
 }
