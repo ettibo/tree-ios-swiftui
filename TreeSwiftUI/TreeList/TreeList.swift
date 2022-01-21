@@ -7,15 +7,29 @@
 
 import SwiftUI
 import Foundation
+import Resolver
 
 struct TreeList: View {
-    @EnvironmentObject var viewModel: TreeListViewModel
+    let viewModel: TreeListViewModel
+    @ObservedObject var store: TreeListStore
+    
+    // MARK: Init
+    
+    init() {
+        let store = TreeListStore()
+        self.init(store: store, viewModel: .init(store: store))
+    }
+    
+    init(store: TreeListStore, viewModel: TreeListViewModel) {
+        self.store = store
+        self.viewModel = viewModel
+    }
     
     // MARK: Views
     
     var body: some View {
         NavigationView {
-            List(viewModel.records, id: \.recordid) { item in
+            List(viewModel.store.records, id: \.recordid) { item in
                 NavigationLink(destination: TreeDetail(tree: item.fields)) {
                     Text(item.fields.libellefrancais ?? "")
                 }

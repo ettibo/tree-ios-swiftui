@@ -6,20 +6,28 @@
 //
 
 import Foundation
+import Resolver
 
-class TreeListViewModel: ObservableObject {
-    private let worker = TreeListService()
+class TreeListViewModel {
+    @Injected var service: TreeListService
+    var store: TreeListStore
     
-    @Published var records = [Record]()
+    // MARK: Init
+    
+    init(store: TreeListStore) {
+        self.store = store
+    }
+    
+    // MARK: Fetch
     
     func fetchData() {
         let completionHandler: ([Record]) -> Void = { [weak self] recordList in
             DispatchQueue.main.async {
-                self?.records = recordList
+                self?.store.records = recordList
             }
         }
         Task.init {
-            await self.worker.fetchTrees(completionHandler: completionHandler)
+            await self.service.fetchTrees(completionHandler: completionHandler)
         }
     }
 }

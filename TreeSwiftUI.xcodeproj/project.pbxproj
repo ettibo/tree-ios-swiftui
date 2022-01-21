@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2307A6F6279AFD9D0044ED89 /* TreeListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A6F5279AFD9D0044ED89 /* TreeListStore.swift */; };
+		2307A6F8279AFF340044ED89 /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A6F7279AFF340044ED89 /* AppDelegate+Injection.swift */; };
+		2307A6FB279AFFEE0044ED89 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 2307A6FA279AFFEE0044ED89 /* Resolver */; };
+		2307A6FD279B00390044ED89 /* Services+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A6FC279B00390044ED89 /* Services+Injection.swift */; };
 		23307A5327887330006AFF4C /* TreeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23307A5227887330006AFF4C /* TreeSwiftUIApp.swift */; };
 		23307A5527887330006AFF4C /* TreeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23307A5427887330006AFF4C /* TreeList.swift */; };
 		23307A5727887332006AFF4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23307A5627887332006AFF4C /* Assets.xcassets */; };
@@ -38,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2307A6F5279AFD9D0044ED89 /* TreeListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListStore.swift; sourceTree = "<group>"; };
+		2307A6F7279AFF340044ED89 /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
+		2307A6FC279B00390044ED89 /* Services+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Injection.swift"; sourceTree = "<group>"; };
 		23307A4F27887330006AFF4C /* TreeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23307A5227887330006AFF4C /* TreeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSwiftUIApp.swift; sourceTree = "<group>"; };
 		23307A5427887330006AFF4C /* TreeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeList.swift; sourceTree = "<group>"; };
@@ -59,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2307A6FB279AFFEE0044ED89 /* Resolver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2307A6F2279AFCE70044ED89 /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				2307A6FC279B00390044ED89 /* Services+Injection.swift */,
+				2307A6F7279AFF340044ED89 /* AppDelegate+Injection.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
 		23307A4627887330006AFF4C = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +119,7 @@
 		23307A5127887330006AFF4C /* TreeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				2307A6F2279AFCE70044ED89 /* Injection */,
 				23ECEFF92788858700F71C63 /* TreeDetail */,
 				23ECEFF82788856200F71C63 /* TreeList */,
 				23307A7C27887DED006AFF4C /* Models */,
@@ -151,6 +169,7 @@
 				23307A5427887330006AFF4C /* TreeList.swift */,
 				23D6940C2788890A0091FD42 /* TreeListViewModel.swift */,
 				23D6940E2788893E0091FD42 /* TreeListService.swift */,
+				2307A6F5279AFD9D0044ED89 /* TreeListStore.swift */,
 			);
 			path = TreeList;
 			sourceTree = "<group>";
@@ -179,6 +198,9 @@
 			dependencies = (
 			);
 			name = TreeSwiftUI;
+			packageProductDependencies = (
+				2307A6FA279AFFEE0044ED89 /* Resolver */,
+			);
 			productName = TreeSwiftUI;
 			productReference = 23307A4F27887330006AFF4C /* TreeSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +273,9 @@
 				Base,
 			);
 			mainGroup = 23307A4627887330006AFF4C;
+			packageReferences = (
+				2307A6F9279AFFEE0044ED89 /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
 			productRefGroup = 23307A5027887330006AFF4C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,12 +318,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2307A6F8279AFF340044ED89 /* AppDelegate+Injection.swift in Sources */,
 				23307A5527887330006AFF4C /* TreeList.swift in Sources */,
 				23307A7E27887E09006AFF4C /* Welcome.swift in Sources */,
 				23ECEFFB2788859E00F71C63 /* TreeDetail.swift in Sources */,
 				23307A5327887330006AFF4C /* TreeSwiftUIApp.swift in Sources */,
 				23D6940D2788890A0091FD42 /* TreeListViewModel.swift in Sources */,
 				23D6940F2788893E0091FD42 /* TreeListService.swift in Sources */,
+				2307A6F6279AFD9D0044ED89 /* TreeListStore.swift in Sources */,
+				2307A6FD279B00390044ED89 /* Services+Injection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +647,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2307A6F9279AFFEE0044ED89 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2307A6FA279AFFEE0044ED89 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2307A6F9279AFFEE0044ED89 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 23307A4727887330006AFF4C /* Project object */;
 }

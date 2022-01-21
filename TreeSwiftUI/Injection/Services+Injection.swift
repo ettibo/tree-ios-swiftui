@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+import Resolver
+
+extension Resolver {
+    public static func registerServices() {
+        registerTreeListService()
+    }
+    
+    public static func registerTreeListService() {
+        register { TreeListService() }
+    }
+}

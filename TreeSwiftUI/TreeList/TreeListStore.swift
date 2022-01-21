@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+class TreeListStore: ObservableObject {
+    @Published var records = [Record]()
+}
