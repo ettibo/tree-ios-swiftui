@@ -9,20 +9,20 @@ import SwiftUI
 import Foundation
 
 struct TreeList: View {
-    @EnvironmentObject var interactor: TreeListViewModel
+    @EnvironmentObject var viewModel: TreeListViewModel
     
     // MARK: Views
     
     var body: some View {
         NavigationView {
-            List(interactor.records, id: \.recordid) { item in
+            List(viewModel.records, id: \.recordid) { item in
                 NavigationLink(destination: TreeDetail(tree: item.fields)) {
                     Text(item.fields.libellefrancais ?? "")
                 }
             }
             .navigationTitle("Trees")
             .task {
-                interactor.fetchData()
+                viewModel.fetchData()
             }
         }
     }
