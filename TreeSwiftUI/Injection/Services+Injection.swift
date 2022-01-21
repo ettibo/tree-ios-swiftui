@@ -16,8 +16,8 @@ extension Resolver {
     }
     
     public static func registerDefaultServices() {
-        register { DefaultNetworkService() }
-        register { DefaultDataTransferService() }
+        register { DefaultNetworkService() }.implements(NetworkService.self)
+        register { DefaultDataTransferService() }.implements(DataTransferService.self)
     }
     
     public static func registerTreeListService() {
