@@ -16,13 +16,12 @@ class TreeListService {
         }
     }
     
-    @Injected var dataTransFertService: DataTransferService
-    
+    @Injected var dataTransFerService: DataTransferService
     
     func fetchTrees(completion: @escaping (Result<[Record], Error>) -> Void) async {
         let treeEndpoint = TreeEndpoint()
         
-        dataTransFertService.request(endpoint: treeEndpoint) { (result: Result<Welcome, Error>) in
+        dataTransFerService.request(endpoint: treeEndpoint) { (result: Result<Welcome, Error>) in
             switch result {
             case .success(let responseDTO):
                 completion(.success(responseDTO.records))
