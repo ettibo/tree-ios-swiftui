@@ -15,7 +15,6 @@ public class JSONResponseDecoder: ResponseDecoder {
     private let jsonDecoder = JSONDecoder()
     public init() { }
     public func decode<T: Decodable>(type: T.Type, _ data: Data) throws -> T {
-        
         return try jsonDecoder.decode(type, from: data)
     }
 }

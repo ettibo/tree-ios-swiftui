@@ -22,7 +22,7 @@ class TreeListService {
     func fetchTrees(completion: @escaping (Result<[Record], Error>) -> Void) async {
         let treeEndpoint = TreeEndpoint()
         
-        self.dataTransFertService.request(endpoint: treeEndpoint) { (result: Result<Welcome, Error>) in
+        dataTransFertService.request(endpoint: treeEndpoint) { (result: Result<Welcome, Error>) in
             switch result {
             case .success(let responseDTO):
                 completion(.success(responseDTO.records))
