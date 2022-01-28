@@ -26,6 +26,7 @@
 		23307A7E27887E09006AFF4C /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23307A7D27887E09006AFF4C /* Welcome.swift */; };
 		23D6940D2788890A0091FD42 /* TreeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D6940C2788890A0091FD42 /* TreeListViewModel.swift */; };
 		23D6940F2788893E0091FD42 /* TreeListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D6940E2788893E0091FD42 /* TreeListService.swift */; };
+		23E9C2F427A4034A004A0972 /* TreeListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E9C2F327A4034A004A0972 /* TreeListRow.swift */; };
 		23ECEFFB2788859E00F71C63 /* TreeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECEFFA2788859E00F71C63 /* TreeDetail.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		23307A7D27887E09006AFF4C /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		23D6940C2788890A0091FD42 /* TreeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListViewModel.swift; sourceTree = "<group>"; };
 		23D6940E2788893E0091FD42 /* TreeListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListService.swift; sourceTree = "<group>"; };
+		23E9C2F327A4034A004A0972 /* TreeListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListRow.swift; sourceTree = "<group>"; };
 		23ECEFFA2788859E00F71C63 /* TreeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +195,7 @@
 				23D6940C2788890A0091FD42 /* TreeListViewModel.swift */,
 				23D6940E2788893E0091FD42 /* TreeListService.swift */,
 				2307A6F5279AFD9D0044ED89 /* TreeListStore.swift */,
+				23E9C2F327A4034A004A0972 /* TreeListRow.swift */,
 			);
 			path = TreeList;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				2307A700279B07950044ED89 /* DataTransferService.swift in Sources */,
 				2307A708279B08570044ED89 /* NetworkService.swift in Sources */,
 				23307A5327887330006AFF4C /* TreeSwiftUIApp.swift in Sources */,
+				23E9C2F427A4034A004A0972 /* TreeListRow.swift in Sources */,
 				23D6940D2788890A0091FD42 /* TreeListViewModel.swift in Sources */,
 				23D6940F2788893E0091FD42 /* TreeListService.swift in Sources */,
 				2307A6F6279AFD9D0044ED89 /* TreeListStore.swift in Sources */,

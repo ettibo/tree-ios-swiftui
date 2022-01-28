@@ -31,7 +31,7 @@ struct TreeList: View {
         NavigationView {
             List(viewModel.store.records, id: \.recordid) { item in
                 NavigationLink(destination: TreeDetail(tree: item.fields)) {
-                    Text(item.fields.libellefrancais ?? "")
+                    TreeListRow(item: item.fields)
                 }
             }
             .navigationTitle("Trees")
