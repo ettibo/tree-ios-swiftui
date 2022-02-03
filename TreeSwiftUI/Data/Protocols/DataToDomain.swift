@@ -8,5 +8,6 @@
 import Foundation
 
 protocol DataToDomain {
-    func ToDomain() -> Any
+    associatedtype M: Any
+    func ToDomain() -> M
 }

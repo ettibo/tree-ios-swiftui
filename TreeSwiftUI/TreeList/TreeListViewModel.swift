@@ -24,7 +24,7 @@ class TreeListViewModel {
         let completionHandler: (Result<[Record], Error>) -> Void = { [weak self] res in
             DispatchQueue.main.async {
                 if case let .success(listTree) = res {
-                    self?.store.trees = listTree.map { $0.fields.ToDomain() as? Tree ?? Tree.empty }
+                    self?.store.trees = listTree.map { $0.fields.ToDomain() }
                 }
             }
         }

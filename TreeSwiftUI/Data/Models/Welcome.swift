@@ -41,7 +41,7 @@ struct Geometry: Codable {
 }
 
 extension Fields: DataToDomain {
-    func ToDomain() -> Any {
+    func ToDomain() -> Tree {
         Tree(id: idbase,
              hauteurenm: hauteurenm,
              libellefrancais: libellefrancais,
