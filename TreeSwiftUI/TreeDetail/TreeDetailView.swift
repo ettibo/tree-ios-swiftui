@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct TreeDetail : View {
-    let tree: Fields
+struct TreeDetailView : View {
+    let tree: Tree
 
     var body: some View {
         VStack {
-            Text(tree.adresse ?? "")
+            Text(tree.adresse ?? "").accessibilityIdentifier("plop")
             Text(tree.espece ?? "")
             Text(tree.arrondissement ?? "")
             Text(tree.genre ?? "")

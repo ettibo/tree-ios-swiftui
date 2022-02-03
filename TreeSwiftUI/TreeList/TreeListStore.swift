@@ -8,5 +8,5 @@
 import Foundation
 
 class TreeListStore: ObservableObject {
-    @Published var records = [Record]()
+    @Published var trees = [Tree]()
 }

@@ -39,3 +39,17 @@ struct Fields: Codable {
 struct Geometry: Codable {
     let coordinates: [Double]
 }
+
+extension Fields: DataToDomain {
+    func ToDomain() -> Any {
+        Tree(id: idbase,
+             hauteurenm: hauteurenm,
+             libellefrancais: libellefrancais,
+             circonferenceencm: circonferenceencm,
+             espece: espece,
+             genre: genre,
+             adresse: adresse,
+             arrondissement: arrondissement,
+             varieteoucultivar: varieteoucultivar)
+    }
+}

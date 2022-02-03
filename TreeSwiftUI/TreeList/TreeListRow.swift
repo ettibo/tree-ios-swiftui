@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TreeListRow : View {
-    let item: Fields
+    let tree: Tree
 
     var body: some View {
         
@@ -19,8 +19,8 @@ struct TreeListRow : View {
                 .frame(width: 40, height: 40, alignment: .center)
             
             VStack(alignment: .leading) {
-                Text(item.libellefrancais ?? "")
-                Text(item.espece ?? "")
+                Text(tree.libellefrancais ?? "")
+                Text(tree.espece ?? "")
             }
         }
     }

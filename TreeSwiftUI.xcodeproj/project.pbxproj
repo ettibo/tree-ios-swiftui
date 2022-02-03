@@ -17,7 +17,7 @@
 		2307A706279B08140044ED89 /* JSONResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A705279B08140044ED89 /* JSONResponseDecoder.swift */; };
 		2307A708279B08570044ED89 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307A707279B08570044ED89 /* NetworkService.swift */; };
 		23307A5327887330006AFF4C /* TreeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23307A5227887330006AFF4C /* TreeSwiftUIApp.swift */; };
-		23307A5527887330006AFF4C /* TreeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23307A5427887330006AFF4C /* TreeList.swift */; };
+		23307A5527887330006AFF4C /* TreeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23307A5427887330006AFF4C /* TreeListView.swift */; };
 		23307A5727887332006AFF4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23307A5627887332006AFF4C /* Assets.xcassets */; };
 		23307A5A27887332006AFF4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23307A5927887332006AFF4C /* Preview Assets.xcassets */; };
 		23307A6427887332006AFF4C /* TreeSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23307A6327887332006AFF4C /* TreeSwiftUITests.swift */; };
@@ -27,7 +27,10 @@
 		23D6940D2788890A0091FD42 /* TreeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D6940C2788890A0091FD42 /* TreeListViewModel.swift */; };
 		23D6940F2788893E0091FD42 /* TreeListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D6940E2788893E0091FD42 /* TreeListService.swift */; };
 		23E9C2F427A4034A004A0972 /* TreeListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E9C2F327A4034A004A0972 /* TreeListRow.swift */; };
-		23ECEFFB2788859E00F71C63 /* TreeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECEFFA2788859E00F71C63 /* TreeDetail.swift */; };
+		23ECEFFB2788859E00F71C63 /* TreeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECEFFA2788859E00F71C63 /* TreeDetailView.swift */; };
+		8DCA271227AA92AC009A083F /* TreeListExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA271127AA92AC009A083F /* TreeListExecutor.swift */; };
+		8DCA271727AC0ABD009A083F /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA271627AC0ABD009A083F /* Tree.swift */; };
+		8DCA271A27AC0B22009A083F /* DataToDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCA271927AC0B22009A083F /* DataToDomain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +61,7 @@
 		2307A707279B08570044ED89 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		23307A4F27887330006AFF4C /* TreeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23307A5227887330006AFF4C /* TreeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSwiftUIApp.swift; sourceTree = "<group>"; };
-		23307A5427887330006AFF4C /* TreeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeList.swift; sourceTree = "<group>"; };
+		23307A5427887330006AFF4C /* TreeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListView.swift; sourceTree = "<group>"; };
 		23307A5627887332006AFF4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23307A5927887332006AFF4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		23307A5F27887332006AFF4C /* TreeSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreeSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +73,10 @@
 		23D6940C2788890A0091FD42 /* TreeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListViewModel.swift; sourceTree = "<group>"; };
 		23D6940E2788893E0091FD42 /* TreeListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListService.swift; sourceTree = "<group>"; };
 		23E9C2F327A4034A004A0972 /* TreeListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListRow.swift; sourceTree = "<group>"; };
-		23ECEFFA2788859E00F71C63 /* TreeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetail.swift; sourceTree = "<group>"; };
+		23ECEFFA2788859E00F71C63 /* TreeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDetailView.swift; sourceTree = "<group>"; };
+		8DCA271127AA92AC009A083F /* TreeListExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeListExecutor.swift; sourceTree = "<group>"; };
+		8DCA271627AC0ABD009A083F /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		8DCA271927AC0B22009A083F /* DataToDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataToDomain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,11 +149,12 @@
 		23307A5127887330006AFF4C /* TreeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				8DCA271427AC0A5A009A083F /* Domain */,
+				8DCA271327AC0A4D009A083F /* Data */,
 				2307A6FE279B07670044ED89 /* Network */,
 				2307A6F2279AFCE70044ED89 /* Injection */,
 				23ECEFF92788858700F71C63 /* TreeDetail */,
 				23ECEFF82788856200F71C63 /* TreeList */,
-				23307A7C27887DED006AFF4C /* Models */,
 				23307A5227887330006AFF4C /* TreeSwiftUIApp.swift */,
 				23307A5627887332006AFF4C /* Assets.xcassets */,
 				23307A5827887332006AFF4C /* Preview Content */,
@@ -191,11 +198,12 @@
 		23ECEFF82788856200F71C63 /* TreeList */ = {
 			isa = PBXGroup;
 			children = (
-				23307A5427887330006AFF4C /* TreeList.swift */,
+				23307A5427887330006AFF4C /* TreeListView.swift */,
 				23D6940C2788890A0091FD42 /* TreeListViewModel.swift */,
 				23D6940E2788893E0091FD42 /* TreeListService.swift */,
 				2307A6F5279AFD9D0044ED89 /* TreeListStore.swift */,
 				23E9C2F327A4034A004A0972 /* TreeListRow.swift */,
+				8DCA271127AA92AC009A083F /* TreeListExecutor.swift */,
 			);
 			path = TreeList;
 			sourceTree = "<group>";
@@ -203,9 +211,42 @@
 		23ECEFF92788858700F71C63 /* TreeDetail */ = {
 			isa = PBXGroup;
 			children = (
-				23ECEFFA2788859E00F71C63 /* TreeDetail.swift */,
+				23ECEFFA2788859E00F71C63 /* TreeDetailView.swift */,
 			);
 			path = TreeDetail;
+			sourceTree = "<group>";
+		};
+		8DCA271327AC0A4D009A083F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8DCA271827AC0AFC009A083F /* Protocols */,
+				23307A7C27887DED006AFF4C /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8DCA271427AC0A5A009A083F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8DCA271527AC0A76009A083F /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8DCA271527AC0A76009A083F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8DCA271627AC0ABD009A083F /* Tree.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8DCA271827AC0AFC009A083F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8DCA271927AC0B22009A083F /* DataToDomain.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,16 +387,19 @@
 			files = (
 				2307A704279B07EC0044ED89 /* DefaultDataTransferService.swift in Sources */,
 				2307A6F8279AFF340044ED89 /* AppDelegate+Injection.swift in Sources */,
-				23307A5527887330006AFF4C /* TreeList.swift in Sources */,
+				23307A5527887330006AFF4C /* TreeListView.swift in Sources */,
 				23307A7E27887E09006AFF4C /* Welcome.swift in Sources */,
-				23ECEFFB2788859E00F71C63 /* TreeDetail.swift in Sources */,
+				23ECEFFB2788859E00F71C63 /* TreeDetailView.swift in Sources */,
 				2307A700279B07950044ED89 /* DataTransferService.swift in Sources */,
 				2307A708279B08570044ED89 /* NetworkService.swift in Sources */,
 				23307A5327887330006AFF4C /* TreeSwiftUIApp.swift in Sources */,
+				8DCA271A27AC0B22009A083F /* DataToDomain.swift in Sources */,
 				23E9C2F427A4034A004A0972 /* TreeListRow.swift in Sources */,
 				23D6940D2788890A0091FD42 /* TreeListViewModel.swift in Sources */,
+				8DCA271727AC0ABD009A083F /* Tree.swift in Sources */,
 				23D6940F2788893E0091FD42 /* TreeListService.swift in Sources */,
 				2307A6F6279AFD9D0044ED89 /* TreeListStore.swift in Sources */,
+				8DCA271227AA92AC009A083F /* TreeListExecutor.swift in Sources */,
 				2307A702279B07C60044ED89 /* Endpoint.swift in Sources */,
 				2307A706279B08140044ED89 /* JSONResponseDecoder.swift in Sources */,
 				2307A6FD279B00390044ED89 /* Services+Injection.swift in Sources */,

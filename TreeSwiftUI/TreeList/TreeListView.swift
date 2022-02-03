@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation
 import Resolver
 
-struct TreeList: View {
+struct TreeListView: View {
     let viewModel: TreeListViewModel
     @ObservedObject var store: TreeListStore
     
@@ -29,9 +29,9 @@ struct TreeList: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.store.records, id: \.recordid) { item in
-                NavigationLink(destination: TreeDetail(tree: item.fields)) {
-                    TreeListRow(item: item.fields)
+            List(viewModel.store.trees, id: \.id) { item in
+                NavigationLink(destination: TreeDetailView(tree: item)) {
+                    TreeListRow(tree: item)
                 }
             }
             .navigationTitle("Trees")
@@ -44,6 +44,6 @@ struct TreeList: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        TreeList()
+        TreeListView()
     }
 }

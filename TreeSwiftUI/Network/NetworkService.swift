@@ -15,7 +15,6 @@ protocol NetworkService {
 final class DefaultNetworkService: NetworkService {
     func request(from: Endpoint, completion: @escaping CompletionHandler) {
         guard let url = URL(string: from.path) else {
-            
             return
         }
         let request = createRequest(from: url)
